@@ -1,0 +1,920 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+.error{
+	color:red;
+}
+/*表单验证提示文字*/
+html,body{
+  height: 100%;
+  width:100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+a:link,a:visited,a:hover,a:active{
+	text-decoration:none;
+	color:black;
+}
+
+
+.wrap{
+  height: 100%;
+  width: 100%;
+  display:flex;
+  display: -webkit-flex;
+  flex-direction:column;
+}
+/*最外层*/
+.top{
+	position:relative;
+	width: 100%;
+	height: 60px;
+	background-color: #fff;
+	border-bottom:1px solid #CDCDC1;
+	z-index:2000;
+}
+/*顶部*/
+.content{
+	position:relative;
+	width:100%;
+	flex:1;
+	display:flex;
+	z-index:1000;
+}
+/*内容区*/
+.nav{
+  float: left;
+  width: 80px;
+  height: 100%;
+  background-color: #303030;
+  font-family:'Microsoft YaHei';
+}
+/*最左导航栏*/
+.nav-item{
+  width: 80px;
+  height: 60px;
+  padding: 10px 20px 15px 24px; 
+  margin-bottom: 9px;
+  opacity:0.7;
+}
+/*最左导航栏内每个导航块*/
+#nav-item1,#nav-item2,#nav-item3,#nav-item4,#nav-item5,#nav-item6,#nav-item7,#nav-item8 span:first-child{
+	font-size: 25px;
+  	color: white;
+}
+/*最左导航栏内每个导航块内的图标元素*/
+.nav-name{
+  font-size: 10px;
+  color: white;
+}
+/*最左导航栏内每个导航块内的每个文字提示*/
+.projectnavcontainer,.projectdetailnavcontainer{
+	min-width: 200px;
+	width: 200px;
+	height: 100%;
+	background-color:#F7F6F2;
+	float: left;
+	border-right:1px solid #CDCDC1;
+}
+/*介绍块*/
+.ProjectMenu,.TaskMenu,.FriendMenu,.MessageMenu,.ProjectDetailMenu{
+    padding: 30px 25px 10px;
+    border-bottom:1px solid #CDCDC1;
+}
+.ProjectMenu span{
+	float:right;
+	font-size:15px;
+	margin-top:3px;
+}
+.ProjectDetailMenu p:nth-child(1){
+	font-size: 18px;
+	font-weight:bold;
+	margin-bottom:10px;
+}
+.ProjectDetailMenu p:nth-child(2){
+	font-size: 10px;
+	margin-bottom:10px;
+	word-break: break-all;
+}
+/*介绍块头部*/
+.ProjectMenu p:first-child{
+	font-size: 18px;
+	font-weight:bold;
+}
+.ProjectMenu p:nth-child(2){
+	font-size: 10px;
+}
+/*介绍块头部内文字*/
+.MyProject,.MyProjectDetails{
+    height: 100%;
+    background-color: #F7F6F2;
+    flex:1;
+    padding:55px 40px;
+    overflow:hidden;
+}
+
+/*我的项目*/
+.MyProjectHeader{
+	font-family:'Microsoft YaHei';
+	font-size:18px;
+	border-bottom:1px dashed #CDCDC1;
+	padding-bottom:9px;
+}
+/*所有项目*/
+.MyProjectHeaderA{
+	font-size:15px;
+	float:right;
+}
+.MyProjectList{
+	margin-left:55px;
+	margin-top:20px;
+	padding:20px;
+	background-color: #F4F4F4;
+}
+/*我的项目列表*/
+.ProjectItem{
+	position:relative;
+	margin-right:27px;
+	display:inline-block;
+	text-align:center;
+	font-size:12px;
+	width:120px;
+	color:black;
+}
+/*我的单个项目*/
+.ProjectItemImage{
+	float:left;
+}
+.ProjectItemImage img{
+	border-radius:8px;
+}
+/*我的项目图片*/
+.createANewProject{
+	width:120px;
+	height:120px;
+	border:1px dashed black;
+}
+.createANewProject i{
+	font-size:40px;
+	margin-top:40px;
+	opacity:0.8;
+}
+/*创建一个新项目*/
+.createProjectForm{
+	height:100%;
+	position: relative;
+	background-color:#F7F6F2;
+	font-family:'Microsoft YaHei';
+	padding-top:70px;
+	padding-left:70px;
+	padding-right:70px;
+}
+.createprojectform_createproject{
+	font-size:23px;
+	font-weight:bold;
+	display:inline-box;
+	padding-bottom:7px;
+	border-bottom:1px solid black;
+	width:1000px;
+}
+
+/*创建项目页面区块*/
+/*创建项目页面-start*/
+.createProjectFormName{
+	margin-top:30px;
+	width:1000px;
+	position:relative;
+	top:30px;
+}
+.createProjectFormName p{
+	float:left;
+	line-height:40px;
+}
+.createProjectFormName input{
+	width:350px;
+	height:40px;
+	margin-left: 19px;
+}
+.createProjectFormDis{
+	width:1000px;
+	position:relative;
+	top:50px;
+	left:-57px;
+}
+.createProjectFormDis p{
+	display:inline-box;
+	float:left;
+	line-height:170px;
+}
+.createProjectFormDis input{
+	width:600px;
+	height:170px;
+	margin-left: 19px;
+}
+.createProjectFormDate{
+	width:1000px;
+	position:relative;
+	top:70px;	
+	left:-114px;
+}
+.createProjectFormDate p{
+	display:inline-box;
+	float:left;
+	line-height:30px;
+}
+.createProjectFormDate input{
+	margin-left: 19px;
+}
+.buttongroup{
+	width:1000px;
+	position:relative;
+	top:90px;
+	left:-95px;
+}
+.buttongroup input{
+	width:60px;
+	height:30px;
+	margin-right:220px;
+}
+/*创建项目页面-end*/
+/*项目详情页面-start*/
+.realtimeline{
+	background:url(../images/aaa.png);
+	width: 5px;
+	height: 0;
+	position: relative;
+	left: 379px;
+	top: 107px;
+	z-index: 2000;
+	float: left;
+}
+.timeline{
+	background:url("../images/line4_inactive.png") repeat-y 245px 0;
+	position:relative;
+	height:1495px;
+	margin:20px 10px;width:700px;    
+	margin-left: 129px;
+	float: left;
+}
+.timeline-date{
+	position:relative;
+	margin-left: 195px;    
+	z-index: 2100;
+}
+.timeline-date h2{
+	background:url("../images/icon9.png") no-repeat 10px 0;
+	height:87px;
+	margin-bottom:20px;
+}
+.timeline-date h2 span{
+	color:#999999;
+	display:inline-block;
+	font-size:22px;
+	margin:30px 0px 0 110px;
+}
+.timeline-date ul li{
+	no-repeat 42px 5px;
+	zoom:1;
+	height:70px;
+}
+.timeline-date ul li h3{
+	float:left;
+	text-align:right;
+	font-size:14px;
+	color:#878787;
+	display:block;
+	margin-left: -132px;
+}	
+.timeline-date ul li h3 span{
+	display:block;
+	color:#ADADAD;
+	font-size:12px;
+	padding-left:15px;
+}	
+.timeline-date ul li dl{
+	margin-top:-5px;
+}
+.timeline-date ul li dl.right{
+	background:url() no-repeat 0 0;
+	float:left;
+	margin-left:10px;
+	margin-top:-5px;
+	display:block;
+	background-color:#FFBB42;
+	height:40px;
+	width:auto;
+}
+.timeline-date ul li dl.left{
+	background:url() no-repeat 0 0;
+	float:left;
+	margin-left: -99px;
+	margin-top:-5px;
+	display:block;
+	background-color:#FFBB42;
+	height:40px;
+	width:130px;
+}	
+.timeline-date ul li dl span{
+	display:block;
+	font-size:16px;
+	padding:0px 30px 0px 30px;
+	color:#fff;
+	line-height:40px;
+}
+#remove_a_member{
+	float:left;
+	line-height:50px;
+	margin-left:20px;
+}
+#transfer_project{
+	float:left;
+	line-height:50px;
+	margin-left:7px;
+	font-size:6px;
+}
+/*项目详情页面-end*/
+.MyTask{
+	font-family:'Microsoft YaHei';
+	font-size:18px;
+	border-bottom:1px solid #F4F4F4;
+	padding-bottom:6px;
+}
+.ProjectMenuNav,.TaskMenuNav,.FriendMenuNav,.MessageMenuNav{
+	width:100%;
+	font-family:'Microsoft YaHei';
+	font-size:15px;
+	padding-top:30px;
+	padding-bottom:30px;
+	border-bottom:1px solid #CDCDC1;
+}
+.TaskMenuNav{
+	position: relative;
+	z-index: 2000;
+}
+.AllMenu,.CreatedMenu,.JoinedMenu,.AllTask,.CreatedTask,.JoinedTask,.Fancying,.Fancied,.MessageMenuNavAll,.MessageMenuNavUnchecked{
+	width:100%;
+	margin-top:3px;
+	display:block;
+	color:black;
+	width:100%;
+}
+.glyphicon-folder-close,.glyphicon-folder-open,.glyphicon-print,.glyphicon-cloud,.glyphicon-comment,.glyphicon-text-height{
+	margin:10px 0 10px 25px;
+}
+.glyphicon-headphones{
+	margin:10px 0 10px 25px;
+}
+.glyphicon-tasks1,.glyphicon-move,.glyphicon-check,.glyphicon-eye-open,.glyphicon-heart,.glyphicon-send,.glyphicon-unchecked{
+	margin:10px 0 10px 25px;
+}
+.CreatedMenu i{
+	margin:10px 10px 10px 25px;
+}
+.JoinedMenu i{
+	margin:10px 10px 10px 25px;
+}
+.AllMenuIcon,.CreatedMenuIcon,.JoinedMenuIcon{
+	float:left;
+}
+.ProjectMenuAboutMe{
+	width:100%;
+	font-family:'Microsoft YaHei';
+	font-size:15px;
+	padding-top:30px;
+	padding-bottom:30px;
+	border-bottom:1px solid #CDCDC1;
+}
+.Task_Table{
+	z-index: 10;
+	height: 100%;
+    background-color: #F7F6F2;
+	font-family:'Microsoft YaHei';
+	background-color:white;
+	flex:1;
+	background-color:#F7F6F2;
+	
+}
+.TaskTableHeader{
+	width:1000px;
+	height:80px;
+	margin-left:35px;
+}
+.searchBox{
+	float:left;
+	padding-bottom:3px;
+	border-bottom:1px solid #8B8B83;
+	position:relative;
+	top:40px;
+	margin-left:70px;
+}
+.filtersSort,.filterCreator,.filterexecutor,.filterTag,.filterDegree,.filterStatus,.filterProject{
+	float:right;
+}
+.projectsIssues{
+	float:left;
+	width:55%;
+	height:75%;
+	background-color:#F4F4F4;
+	position:relative;
+	left:70px;
+	top:70px;
+}
+.issuesheader,.bubbleheader{
+	font-family:'Microsoft YaHei';
+	font-size:20px;
+	position:relative;
+	margin-top:25px;
+	margin-left:15px;
+	margin-right:15px;
+	border-bottom:1px solid #CDCDC1;
+	padding-bottom:7px;
+}
+.projectsIssuesnav{
+	position:relative;
+	margin-top:7px;
+	margin-left:15px;
+	margin-right:15px;
+	border-bottom:1px solid #CDCDC1;
+	padding-bottom:7px;
+	font-size:15px;
+}
+.projectsIssuesnav span{
+	margin-right:25px;
+}
+.projectsBubble{
+	float:right;
+	width:30%;
+	height:75%;
+	background-color:#F4F4F4;
+	position:relative;
+	top:70px;
+	right:30px;
+}
+.searchBoxInput{
+	border:0;
+	background-color:#F7F6F2;
+}
+.searchBoxInput:focus{
+	outline:none;
+}
+.filtersSort,.filterCreator,.filterexecutor,.filterTag,.filterDegree,.filterStatus,.filterProject{
+	float:right;
+	position:relative;
+	right:50px;
+	top:45px;
+	margin-right:15px;
+}
+.TaskTableBody{
+	width:1060px;
+	height:500px;
+    margin-top: 30px;
+    overflow:auto;
+    padding: 0px 30px;
+}
+.TaskTableBodyheader{
+	margin-left:40px;
+	width: 200px;
+	font-size:18px;
+	position:relative;
+	left:35px;
+	padding-bottom:5px;
+}
+.TaskTableBodybody{
+	width:1000px;
+	position:relative;
+	margin-left:40px;
+}
+.one-task{
+	width: 100%;
+	height: 42px;
+	clear:both;
+}
+.one-task p{
+	display:block;
+}
+.simpletask{
+	position:relative;
+	padding:5px 0;
+}
+.FriendTable,.MessageTable{
+	width:90%;
+	height:70%;
+	min-width:1000px;
+	min-height:500px;
+	position:relative;
+	margin:30px auto;
+	font-family:'Microsoft YaHei';
+}
+.FriendTableHeader,.MessageTableHeader{
+	font-size:20px;
+	padding-bottom:7px;
+	border-bottom:1px solid #8B8B83;
+}
+.friend{
+	display:left;
+	width:380px;
+	height:64px;
+	position:relative;
+	padding:20px 10px;
+	margin:15px 10px;
+	position:relative;
+	display:inline-block;
+	background-color:#FFF;
+	border:1px solid #8B8B83;
+	border-radius:3px;
+}
+.avator{
+	position:absolute;
+	left:10px;
+	top:50%;
+	margin-top:-30px;
+	width:64px;
+	height:64px;
+}
+.sendMessage{
+	width:84px;
+	height:24px;
+	line-height:24px;
+	font-size:12px;
+	background-color:white;
+	float:right;
+	border-radius:24px;
+	text-align:center;
+	font-weight:bold;
+}
+.clearAllMessage{
+	width:84px;
+	height:24px;
+	line-height:24px;
+	font-size:12px;
+	background-color:#DC143C;
+	float:right;
+	border-radius:24px;
+	text-align:center;
+	font-weight:bold;
+	color:white;
+}
+.projectsfile{
+	float:left;
+	width:80%;
+	height:75%;
+	background-color:#F4F4F4;
+	position:relative;
+	left:70px;
+	top:70px;
+}
+.filemenu{
+	width:17%;
+	height:100%;
+	position:relative;
+	float:left;
+	border-right:1px solid #CDCDC1;
+}
+.filemenuheader{
+	height:60px;
+	font-family:'Microsoft YaHei';
+	font-size:18px;
+	font-weight:bold;
+}
+.filemenuheader p{
+	margin-top:30px;
+	margin-left:35px;
+}
+.ui.divider{
+	margin:12px 0;
+}
+.ui.divider{
+	border-top:1px solid rgba(0,0,0,.1);
+	border-bottom:1px solid rgba(255,255,255,.8);
+	line-height:1;
+	height:0;
+}
+.folders{
+	width:100%;
+	border-top:1px solid #CDCDC1;
+}
+.filemenufolder{
+	font-family:'Microsoft YaHei';
+}
+.createfolder{
+	
+}
+.createfolderbutton{
+	width:100px;
+	height:30px;
+	border:none;
+	position:relative;
+	margin-left:40px;
+	margin-top:40px;
+	background-color:red;
+	color:white;
+	font-family:'Microsoft YaHei';
+}
+.filespace{
+	width:1000px;
+	height:100%;
+}
+.filespaceheader{
+	width:100%;
+	height:70px;
+	border-bottom:1px solid #CDCDC1;
+}
+.discuss_list_table{
+	width:100%;
+	height:auto;
+	padding-top:15px;
+}
+.discuss_list{
+	width:100%;
+	height:30px;
+	margin-top:3px;
+	line-height:30px;
+	border-bottom:1px solid #CDCDC1;
+}
+.discuss_list_name,.discuss_list_sender,.discuss_list_time{
+	float:left;
+}
+.discuss_list_name{
+	margin-left:15px;
+	width: 380px;
+}
+.discuss_list_sender{
+	width: 140px;
+}
+.discuss_list_time{
+}
+.tasktable{
+	width:70%;
+	margin-left: 300px;
+	border-bottom: 1px solid #CDCDC1;
+	padding-bottom: 15px;
+	margin-top: 50px;
+}
+.tasktable-header{
+	width: 100%;
+	height: 30px;
+	margin-top: 30px;
+}
+.tasktable-list{
+	width: 500px;
+}
+.tasktable-list span{
+	margin-left: 0;
+}
+.tasktable-detail{
+	width: 100%;
+	background-color: white;
+	float: left;
+}
+.tasktable p{
+	float: left;
+	font-family:'Microsoft YaHei';
+	font-size:15px;
+	display: block;
+}
+.tasktable form{
+	float: right;
+}
+.filespaceheader p{
+	float:left;
+	position:relative;
+	margin-top:30px;
+	font-family:'Microsoft YaHei';
+	font-size:20px;
+}
+.fake-uploadpopup{
+	float:right;
+	margin-top:30px;
+	margin-right:90px;
+	border:0;
+	width:70px;
+	height:30px;
+	line-height:30px;
+	border-radius:30px;
+	color:#FFF;
+	background-color:#32be77;
+	padding-left:5px;
+}
+.upload{
+	float:right;
+	margin-top:30px;
+	margin-right:30px;
+	border:0;
+	width:80px;
+	height:30px;
+	border-radius:30px;
+	color:#FFF;
+	background-color:#32be77;
+}
+.uploadpopup{
+	position:absolute;
+	float:right;
+	margin-top:30px;
+	right:30px;
+	opacity: 0;
+}
+.filespacetable{
+	width: 100%;
+	height:auto;
+	margin-top: 10px;
+}
+.table{
+	font-family:'Microsoft YaHei';
+}
+.icon_box{
+	width:60px;
+	height:60px;
+	float:left;
+	margin-left:10px;
+}
+.icon_box img{
+	width:60px;
+	height:60px;
+}
+.user-name{
+	position:absolute;
+	margin-left: 47%;
+	float: left;
+	width:100px;
+	height: 100%;
+	line-height: 55px;
+	font-size: 20px;
+}
+.chatavatar{
+	width:80px;
+	height:80px;
+	border-radius:40px;
+	background-color:red;
+	float:left;
+}
+/*account-start*/
+.account-setting{
+	width: 100%;
+	height: 100%;
+	background-color: #F7F6F2;
+	padding-left: 80px;
+	padding-top: 60px;
+	flex:1;
+}
+.account-avatar{
+	float: left;
+	width: 128px;
+	height: 128px;
+	border-radius: 64px;
+	background-color: #F7F6F2;
+	margin-left: 60px;
+	margin-top: 20px;
+}
+.account-avatar img{
+	width: 128px;
+	height: 128px;
+	border-radius: 64px;
+}
+.account-details{
+	position: absolute;
+	float: left;
+	width: 600px;
+	height: 650px;
+	background-color: #fff;
+	margin-left: 300px;
+	border-radius: 15px;
+	overflow:auto;
+	box-shadow: 0 1px 1px 2px rgba(0,0,0,.1);
+    -webkit-box-shadow: 0 1px 1px 2px rgba(0,0,0,.1);
+}
+.account-username input,.account-password input,.account-realname input,.account-tel input,.account-birthday input,.account-email input,.account-location input,.account-signature input{
+	border: 1px solid #ccc;
+    padding: 7px 0px;
+    border-radius: 3px;
+    padding-left:5px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+.account-sex-selector,#search_friend_text{
+	border: 1px solid #ccc;
+    border-radius: 3px;
+    padding-left:5px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+.account-username input:focus,.account-password input:focus,.account-realname input:focus,.account-tel input:focus,.account-sex-selector:focus,.account-birthday input:focus,.account-email input:focus,.account-location input:focus,.account-signature input:focus,#search_friend_text:focus{
+	border-color: #66afe9;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+}
+.account-username{
+	margin-top: 20px;
+	margin-left: 40px;
+	font-size: 14px;
+}
+.account-username input{
+	width: 160px;
+	height: 30px;
+	margin-left: 40px;
+}
+.account-password{
+	margin-left: 40px;
+	font-size: 14px;
+	margin-top: 30px;
+}
+.account-password input{
+	width: 160px;
+	height: 30px;
+	margin-left: 55px;
+}
+.account-realname{
+	margin-left: 40px;
+	font-size: 14px;
+	margin-top: 30px;
+}
+.account-realname input{
+	width: 160px;
+	height: 30px;
+	margin-left: 26px;
+}
+.account-sex{
+	margin-left: 38px;
+	font-size: 14px;
+	margin-top: 30px;
+}
+.account-tel{
+	margin-left: 40px;
+	font-size: 14px;
+	margin-top: 30px;
+}
+.account-tel input{
+	width: 180px;
+	height: 30px;
+	margin-left: 60px;
+}
+.account-sex-selector{
+	position: relative;
+	width: 60px;
+	height: 30px;
+	margin-left: 57px;
+}
+.account-birthday{
+	margin-left: 40px;
+	font-size: 14px;
+	margin-top: 30px;
+}
+.account-birthday input{
+	width: 300px;
+	height: 30px;
+	margin-left: 25px;
+}
+.account-email{
+	margin-left: 40px;
+	font-size: 14px;
+	margin-top: 30px;
+}
+.account-email input{
+	width: 300px;
+	height: 30px;
+	margin-left: 46px;
+}
+.account-email span{
+	font-size:10px;
+	font-family:"宋体";
+	color:red;
+	margin-left:5px;
+}
+.account-location{
+	margin-left: 40px;
+	font-size: 14px;
+	margin-top: 30px;
+}
+.account-location input{
+	width: 300px;
+	height: 30px;
+	margin-left: 40px;
+}
+.account-signature{
+	margin-left: 40px;
+	font-size: 14px;
+	margin-top: 30px;
+}
+.account-signature input{
+	width: 300px;
+	height: 30px;
+	margin-left: 23px;
+}
+.account-modify{
+	width: 80px;
+	height: 30px;
+	background-color: #00CED1;
+	border:0;
+	border-radius: 15px;
+	float: right;
+	margin-right: 250px;
+	margin-top: 70px;
+}
+/*account-end*/

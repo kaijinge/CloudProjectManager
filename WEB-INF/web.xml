@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+  <display-name></display-name>	
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+  <servlet-name>login</servlet-name>
+  <servlet-class>Servlet.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>login</servlet-name>
+  <url-pattern>/login</url-pattern>
+  </servlet-mapping>
+  
+<filter>
+<filter-name>loginFilter</filter-name>
+<filter-class>util.LoginFilter</filter-class>
+</filter>
+<filter-mapping>
+<filter-name>loginFilter</filter-name>
+<url-pattern>/*</url-pattern>
+</filter-mapping>
+
+  <servlet>
+  <servlet-name>createproject</servlet-name>
+  <servlet-class>Servlet.CreateProjectServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>createproject</servlet-name>
+  <url-pattern>/createproject</url-pattern>
+  </servlet-mapping>
+
+ <servlet>
+  <servlet-name>Projectdetail</servlet-name>
+  <servlet-class>Servlet.ProjectdetailServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>Projectdetail</servlet-name>
+  <url-pattern>/detail</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>Upload</servlet-name>
+  <servlet-class>Servlet.UploadServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>Upload</servlet-name>
+  <url-pattern>/Upload</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>down</servlet-name>
+  <servlet-class>Servlet.DownServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>down</servlet-name>
+  <url-pattern>/down</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>file</servlet-name>
+  <servlet-class>Servlet.QueryAllFileServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>file</servlet-name>
+  <url-pattern>/file</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>deletefile</servlet-name>
+  <servlet-class>Servlet.DeleteFileServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>deletefile</servlet-name>
+  <url-pattern>/deletefile</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>createtask</servlet-name>
+  <servlet-class>Servlet.CreateTaskServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>createtask</servlet-name>
+  <url-pattern>/createtask</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>queryalltask</servlet-name>
+  <servlet-class>Servlet.QueryAllTaskServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>queryalltask</servlet-name>
+  <url-pattern>/queryalltask</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>codefile</servlet-name>
+  <servlet-class>Servlet.QuerycodeFileServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>codefile</servlet-name>
+  <url-pattern>/codefile</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+  <servlet-name>uploadcodefile</servlet-name>
+  <servlet-class>Servlet.UploadCodeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>uploadcodefile</servlet-name>
+  <url-pattern>/uploadcodefile</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+  <servlet-name>discuss</servlet-name>
+  <servlet-class>Servlet.QueryAllDiscussServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>discuss</servlet-name>
+  <url-pattern>/discuss</url-pattern>
+  </servlet-mapping>
+  
+  
+   <servlet>
+  <servlet-name>creatediscuss</servlet-name>
+  <servlet-class>Servlet.CreateDiscussServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>creatediscuss</servlet-name>
+  <url-pattern>/creatediscuss</url-pattern>
+  </servlet-mapping>
+   
+   <servlet>
+  <servlet-name>queryallfriend</servlet-name>
+  <servlet-class>Servlet.QueryAllFriendServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>queryallfriend</servlet-name>
+  <url-pattern>/queryallfriend</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>deletefriend</servlet-name>
+  <servlet-class>Servlet.DeleteFriendServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>deletefriend</servlet-name>
+  <url-pattern>/deletefriend</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+  <servlet-name>queryuserbyname</servlet-name>
+  <servlet-class>Servlet.QueryUserServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>queryuserbyname</servlet-name>
+  <url-pattern>/queryuserbyname</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>addfriend</servlet-name>
+  <servlet-class>Servlet.AddFriendServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>addfriend</servlet-name>
+  <url-pattern>/addfriend</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>querynotice</servlet-name>
+  <servlet-class>Servlet.QueryNoticeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>querynotice</servlet-name>
+  <url-pattern>/querynotice</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>querynoticestatus</servlet-name>
+  <servlet-class>Servlet.QueryNoticeStatusServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>querynoticestatus</servlet-name>
+  <url-pattern>/querynoticestatus</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+  <servlet-name>setnoticestatus</servlet-name>
+  <servlet-class>Servlet.SetNoticeStatusServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>setnoticestatus</servlet-name>
+  <url-pattern>/setnoticestatus</url-pattern>
+  </servlet-mapping>
+   
+  <servlet>
+  <servlet-name>querymytask</servlet-name>
+  <servlet-class>Servlet.QueryMyTaskServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>querymytask</servlet-name>
+  <url-pattern>/querymytask</url-pattern>
+  </servlet-mapping>
+     
+  <servlet>
+  <servlet-name>account</servlet-name>
+  <servlet-class>Servlet.QueryAccountServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>account</servlet-name>
+  <url-pattern>/account</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>updateaccount</servlet-name>
+  <servlet-class>Servlet.UpdateAccountServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>updateaccount</servlet-name>
+  <url-pattern>/updateaccount</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+  <servlet-name>addmember</servlet-name>
+  <servlet-class>Servlet.AddMemberServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>addmember</servlet-name>
+  <url-pattern>/addmember</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>deletecodefile</servlet-name>
+  <servlet-class>Servlet.DeleteCodeFileServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>deletecodefile</servlet-name>
+  <url-pattern>/deletecodefile</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>downcode</servlet-name>
+  <servlet-class>Servlet.DownCodeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>downcode</servlet-name>
+  <url-pattern>/downcode</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+  <servlet-name>queryallfans</servlet-name>
+  <servlet-class>Servlet.QueryAllFansServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>queryallfans</servlet-name>
+  <url-pattern>/queryallfans</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>quit</servlet-name>
+  <servlet-class>Servlet.QuitServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>quit</servlet-name>
+  <url-pattern>/quit</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+  <servlet-name>yz</servlet-name>
+  <servlet-class>Servlet.RegAjaxServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>yz</servlet-name>
+  <url-pattern>/yz</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+  <servlet-name>reg</servlet-name>
+  <servlet-class>Servlet.RegServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>reg</servlet-name>
+  <url-pattern>/reg</url-pattern>
+  </servlet-mapping>
+    
+   <servlet>
+  <servlet-name>querycomment</servlet-name>
+  <servlet-class>Servlet.QueryCommentServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>querycomment</servlet-name>
+  <url-pattern>/querycomment</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+  <servlet-name>sendmessage</servlet-name>
+  <servlet-class>Servlet.SendMessageServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>sendmessage</servlet-name>
+  <url-pattern>/sendmessage</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+  <servlet-name>privateletter</servlet-name>
+  <servlet-class>Servlet.SendPrivateLetterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>privateletter</servlet-name>
+  <url-pattern>/privateletter</url-pattern>
+  </servlet-mapping>
+  
+     <servlet>
+  <servlet-name>querychat</servlet-name>
+  <servlet-class>Servlet.QueryChatServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>querychat</servlet-name>
+  <url-pattern>/querychat</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>deleteMember</servlet-name>
+  <servlet-class>Servlet.DeleteMemberServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>deleteMember</servlet-name>
+  <url-pattern>/deleteMember</url-pattern>
+  </servlet-mapping> 
+  
+    <servlet>
+  <servlet-name>queryallproject</servlet-name>
+  <servlet-class>Servlet.QueryAllProjectServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>queryallproject</servlet-name>
+  <url-pattern>/queryallproject</url-pattern>
+  </servlet-mapping> 
+  
+    <servlet>
+  <servlet-name>settaskstatus</servlet-name>
+  <servlet-class>Servlet.SetTaskStatusServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>settaskstatus</servlet-name>
+  <url-pattern>/settaskstatus</url-pattern>
+  </servlet-mapping> 
+  
+   <servlet>
+  <servlet-name>transfer</servlet-name>
+  <servlet-class>Servlet.TransferProjectServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>transfer</servlet-name>
+  <url-pattern>/transfer</url-pattern>
+  </servlet-mapping> 
+  
+     <servlet>
+  <servlet-name>deletetask</servlet-name>
+  <servlet-class>Servlet.DeleteTaskServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>deletetask</servlet-name>
+  <url-pattern>/deletetask</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+  <servlet-name>UploadUserImageServlet</servlet-name>
+  <servlet-class>Servlet.UploadUserImageServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>UploadUserImageServlet</servlet-name>
+  <url-pattern>/UploadUserImageServlet</url-pattern>
+  </servlet-mapping>  
+
+ <servlet>
+  <servlet-name>QueryTaskKindServlet</servlet-name>
+  <servlet-class>Servlet.QueryTaskKindServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>QueryTaskKindServlet</servlet-name>
+  <url-pattern>/QueryTaskKindServlet</url-pattern>
+  </servlet-mapping>  
+  
+  <servlet>
+  <servlet-name>QueryAllMyTaskServlet</servlet-name>
+  <servlet-class>Servlet.QueryAllMyTaskServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>QueryAllMyTaskServlet</servlet-name>
+  <url-pattern>/QueryAllMyTaskServlet</url-pattern>
+  </servlet-mapping>  
+  
+  <servlet>
+  <servlet-name>QueryMyCreateTaskServlet</servlet-name>
+  <servlet-class>Servlet.QueryMyCreateTaskServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>QueryMyCreateTaskServlet</servlet-name>
+  <url-pattern>/QueryMyCreateTaskServlet</url-pattern>
+  </servlet-mapping>  
+  
+    
+  <servlet>
+  <servlet-name>QueryTaskByNameServlet</servlet-name>
+  <servlet-class>Servlet.QueryTaskByNameServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>QueryTaskByNameServlet</servlet-name>
+  <url-pattern>/QueryTaskByNameServlet</url-pattern>
+  </servlet-mapping>  
+  
+    <servlet>
+  <servlet-name>deletechat</servlet-name>
+  <servlet-class>Servlet.DeleteChatServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>deletechat</servlet-name>
+  <url-pattern>/deletechat</url-pattern>
+  </servlet-mapping>  
+  
+      <servlet>
+  <servlet-name>rname</servlet-name>
+  <servlet-class>Servlet.QueryRnameServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>rname</servlet-name>
+  <url-pattern>/rname</url-pattern>
+  </servlet-mapping>  
+  
+  <servlet>
+  <servlet-name>setschedule</servlet-name>
+  <servlet-class>Servlet.SetScheduleServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>setschedule</servlet-name>
+  <url-pattern>/setschedule</url-pattern>
+  </servlet-mapping>  
+  
+    <servlet>
+  <servlet-name>changedate</servlet-name>
+  <servlet-class>Servlet.ChangeDateServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>changedate</servlet-name>
+  <url-pattern>/changedate</url-pattern>
+  </servlet-mapping>  
+  
+   <servlet>
+  <servlet-name>querytimeaxis</servlet-name>
+  <servlet-class>Servlet.QueryTimeAxisServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>SetOneNoticeStatusServlet</servlet-name>
+    <servlet-class>Servlet.SetOneNoticeStatusServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+  <servlet-name>querytimeaxis</servlet-name>
+  <url-pattern>/querytimeaxis</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SetOneNoticeStatusServlet</servlet-name>
+    <url-pattern>/SetOneNoticeStatusServlet</url-pattern>
+  </servlet-mapping>
+</web-app>
